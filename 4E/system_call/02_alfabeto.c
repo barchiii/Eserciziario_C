@@ -12,7 +12,7 @@ int main (int argc, char* argv[]) {
         exit(1);
     }
 
-    char alfabeto [] = "abcdefghijklmnopqrstuvwxyz"
+    char alfabeto [] = "abcdefghijklmnopqrstuvwxyz";
     int file = open(argv[1], O_CREAT | O_WRONLY, 0777);
     write (file, alfabeto, strlen(alfabeto));
     close(file);
