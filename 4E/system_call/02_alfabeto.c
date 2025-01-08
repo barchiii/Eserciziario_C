@@ -13,7 +13,7 @@ int main (int argc, char* argv[]) {
     }
 
     char alfabeto [] = "abcdefghijklmnopqrstuvwxyz"
-    int file = open(argv[1], O_CREAT | O_WRONLY, 07444);
+    int file = open(argv[1], O_CREAT | O_WRONLY, 0777);
     write (file, alfabeto, strlen(alfabeto));
     close(file);
 
