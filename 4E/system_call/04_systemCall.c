@@ -64,4 +64,5 @@ int main (int argc, char* argv[]) {
     file = open(argv[argc - 1], O_WRONLY | O_CREAT | O_TRUNC, 0644);
     write(file, output, strlen(output));
     close(file);
+    
 }
