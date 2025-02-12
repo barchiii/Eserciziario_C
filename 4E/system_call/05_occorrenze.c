@@ -57,7 +57,7 @@ void crea_stringa_file(int argc, char *argv[], char str[])
         strcat(stringa, argv[i]);
         strcat(stringa, " ");
     }
-    strcat(str, "\n"); // aggiungo un a capo
+    strcat(str, "\n");
 }
 
 int main () {
