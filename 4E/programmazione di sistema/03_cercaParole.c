@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
     }
 
     char stringa[100], file[100];
-    int pipe(p1p0), cont, pid;
+    int pipe(p1p0), cont = 0, pid;
 
     // dichiarazione pipe
     pipe(p1p0);
