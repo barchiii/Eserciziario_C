@@ -14,17 +14,21 @@ il nome del file "file.txt" deve essere passato come argomento in argv[1] */
 
 int main(int argc, char *argv[])
 {
+    // controllo argomenti
     if (argc != 2)
     {
         printf("Numero argomenti sbagliato\n");
         exit(1);
     }
 
+    // dichiarazione pipe
     int p1p0[2], pid, p2p0[2];
     pipe(p1p0);
 
+    // processo padre
     pid = fork();
 
+    // processo figlio che esegue cat
     if (pid == 0)
     {
         close(p1p0[0]);
@@ -35,6 +39,7 @@ int main(int argc, char *argv[])
         return -1;
     }
 
+    // seconda pipe, azioni su pipe p1p0 e wc su pipe p2p0
     pipe(p2p0);
     pid = fork();
 
@@ -54,6 +59,7 @@ int main(int argc, char *argv[])
 
     }
 
+    // chiusura finale processi ancora aperti
     close(p1p0[1]);
     close(p1p0[0]);
     close(p2p0[1]);
@@ -62,8 +68,10 @@ int main(int argc, char *argv[])
     dup(p2p0[0]);
     close(p2p0[0]);
 
+    // scrittura su file e read da wc
     close(1);
     open(wc.txt, O_WRONLY | O_CREAT, 0777);
 
+    // tee scrive sia su file che su stdout, per salvaro su file e visualizzarlo contemporaneamente
     execl("/usr/bin/tee", "tee", (char *)0);
 }
