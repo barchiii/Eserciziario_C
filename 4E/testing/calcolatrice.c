@@ -44,7 +44,6 @@ double radice(double numero)
     }
 }
 
-/*
 // Funzione menu
 void mostra_menu()
 {
@@ -122,4 +121,3 @@ int main() {
 
     return 0;
 }
-*/

@@ -3,6 +3,7 @@ extern "C" {
     #include "calcolatrice.h"
 }
 
+// Test per la calcolatrice
 TEST(CalcolatriceTest, Somma) {
     EXPECT_DOUBLE_EQ(somma(3, 4), 7);
 }

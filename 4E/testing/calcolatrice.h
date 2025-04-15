@@ -1,6 +1,8 @@
 #ifndef CALCOLATRICE_H
 #define CALCOLATRICE_H
 
+// calcolatrice.h
+// Dichiarazione delle funzioni
 double somma(double a, double b);
 double sottrazione(double a, double b);
 double moltiplicazione(double a, double b);
