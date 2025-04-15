@@ -58,14 +58,19 @@ void mostra_menu()
     printf("Scegli un'opzione: ");
 }
 
-
+// Funzione principale
 int main() {
     int scelta;
     double num1, num2, risultato;
 
     do {
         mostra_menu();
-        scanf("%d", &scelta);
+        if (scanf("%d", &scelta) != 1) {
+            printf("Errore: input non valido. Inserisci un numero intero.\n");
+            while (getchar() != '\n'); // Pulisce il buffer di input
+            scelta = -1; // Imposta una scelta non valida per continuare il loop
+            continue;
+        }
 
         switch (scelta) {
             case 1:
