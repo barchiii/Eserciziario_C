@@ -105,5 +105,6 @@
   "gtest-adapter.debugConfig": [
     "C/C++ Runner: Debug Session",
     "C/C++: gcc build and debug active file"
-  ]
+  ],
+  "cmake.ignoreCMakeListsMissing": true
 }
