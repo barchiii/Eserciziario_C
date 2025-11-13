@@ -58,7 +58,8 @@
   "C_Cpp_Runner.msvcSecureNoWarnings": false,
   "C_Cpp.errorSquiggles": "disabled",
   "files.associations": {
-    "softwareLottoC_Gruppo2_3E.C": "cpp"
+    "softwareLottoC_Gruppo2_3E.C": "cpp",
+    "socket.h": "c"
   },
   "editor.tokenColorCustomizations": {
     "[*Light*]": {
