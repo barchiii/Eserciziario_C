@@ -19,7 +19,7 @@ int main() {
     servizio.sin_port = htons(ServerPort);        //porta di comunicazione
     char stringa[20];                             //buffer di comunicazione
 
-    int socketFD, soa fromlen = sizeof(servizio); //file descriptor del socket
+    int socketFD, soa, fromlen = sizeof(servizio); //file descriptor del socket
 
     socketFD = socket(AF_INET, SOCK_STREAM, 0);   //creazione socket TCP
 
