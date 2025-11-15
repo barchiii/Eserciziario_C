@@ -1,13 +1,15 @@
 // CLIENT TCP – Invia una stringa al server e attende una risposta
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <sys/socket.h>
-#include <sys/types.h>
-#include <netinet/in.h>
-#include <string.h>
-#include <errno.h>
-#include <unistd.h>
+// Librerie standard Socket
+#include <stdio.h>       //std in-out
+#include <stdlib.h>      //per utilizzo di certe funzioni:htonl,rand,....
+#include <sys/socket.h>  //funz. accept+bind+listen
+#include <sys/types.h>   //funz. accept
+#include <netinet/in.h>  //definiscono la struttura degli indirizzi
+#include <string.h>      //funz. stringhe
+#include <errno.h>       //gestioni errori connessione
+#include <ctype.h>       //bind
+#include <unistd.h>      // file header che consente l'accesso alle API dello standard POSIX
 
 #define ServerPort 14503
 
